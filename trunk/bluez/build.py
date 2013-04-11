@@ -2,7 +2,8 @@
 
 import os, sys, logging, shutil
 
-shutil.rmtree('build')
+if os.path.isdir('build'):
+    shutil.rmtree('build')
 os.mkdir('build')
 os.chdir('build')
 os.system('cmake .. -G "Unix Makefiles"')
