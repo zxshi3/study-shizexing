@@ -1,7 +1,6 @@
 cmake_minimum_required(VERSION 2.8)
 
 SET (SIMPLESCAN_SRCS ./simplescan.c)
-
 add_executable(simplescan ${SIMPLESCAN_SRCS})
 target_link_libraries(simplescan bluetooth dbus-1)
 
