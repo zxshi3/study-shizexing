@@ -24,9 +24,11 @@ int main(int argc, char **argv)
     bind(s, (struct sockaddr *)&loc_addr, sizeof(loc_addr));
 
     // put socket into listening mode
+    fprintf(stdout, "listen\n");
     listen(s, 1);
 
     // accept one connection
+    fprintf(stdout, "accept\n");
     client = accept(s, (struct sockaddr *)&rem_addr, &opt);
 
     ba2str( &rem_addr.rc_bdaddr, buf );
@@ -34,6 +36,7 @@ int main(int argc, char **argv)
     memset(buf, 0, sizeof(buf));
 
     // read data from the client
+    fprintf(stdout, "read\n");
     bytes_read = read(client, buf, sizeof(buf));
     if( bytes_read > 0 ) {
         printf("received [%s]\n", buf);
