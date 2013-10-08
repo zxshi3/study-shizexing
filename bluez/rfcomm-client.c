@@ -25,6 +25,7 @@ int main(int argc, char **argv)
 
     // send a message
     if( status == 0 ) {
+        fprintf(stdout, "write hello! to remote server\n");
         status = write(s, "hello!", 6);
     }
 
