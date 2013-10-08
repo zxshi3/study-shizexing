@@ -9,6 +9,7 @@ namespace zexing {
 class string {
 public:
 	void constructor();
+    void find();
 };
 }	// zexing
 }	// shi
@@ -16,6 +17,7 @@ public:
 int main(int argc, char** argv) {
 	shi::zexing::string str;
 	str.constructor();
+    str.find();
 	return 0;
 }
 
@@ -73,3 +75,22 @@ void shi::zexing::string::constructor() {
 */
 }
 
+void shi::zexing::string::find() {
+    std::string header = "Accept: text/html\r\nAccept-Encoding: gzip, deflate\r\nUser-Agent: zexing\r\nKeep-Alive: 300\r\n\r\n";
+    std::vector<std::string> headers;
+    std::size_t pos = 0;
+    while(pos != std::string::npos) {
+        std::size_t fd = header.find("\r\n", pos);
+        if (fd == std::string::npos) {
+            break;
+        }
+        headers.push_back(header.substr(pos, fd + sizeof("\r\n")));
+        pos = fd + sizeof("\r\n") + 1;
+    }
+    std::cout << "--- find test ---\n";
+    std::cout << "original string = " << header;
+    std::cout << "header = \n";
+    for (std::vector<std::string>::const_iterator it = headers.begin(); it != headers.end(); it++) {
+        std::cout << *it;
+    }
+}
