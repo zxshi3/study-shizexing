@@ -104,7 +104,7 @@ void print_config_descriptor(const std::string & prefix, libusb_config_descripto
 	std::cout << prefix << "descriptor type : " << (int)desc.bDescriptorType << std::endl;	// LIBUSB_DT_CONFIG
 	std::cout << prefix << "total length : " << (int)desc.wTotalLength << std::endl;
 	std::cout << prefix << "number of interface : " << (int)desc.bNumInterfaces << std::endl;
-	std::cout << prefix << "config id : " << (int)desc.bConfigurationValue << std::endl;
+	std::cout << prefix << "config id : " << (int)desc.bConfigurationValue << std::endl;    // id for configuration, used for libusb_set_configuration
 
 	std::cout << prefix << "config string index : " << (int)desc.iConfiguration << std::endl;
 	if (handle) {
@@ -112,6 +112,13 @@ void print_config_descriptor(const std::string & prefix, libusb_config_descripto
 		std::cout << prefix << "config : " << std::string(buf) << std::endl;
 	}
 	
+    /*
+     * Bitmap Configuration characteristics
+     * D7: Reserved (set to one)
+     * D6: Self-powered
+     * D5: Remote Wakeup
+     * D4...0: Reserved (reset to zero)
+     */
 	std::cout << prefix << "config attributes : 0x" << std::hex << (int)desc.bmAttributes << std::dec << std::endl;
 	std::cout << prefix << "max power consumption : " << (2 * desc.MaxPower) << std::endl;
 	for (int i = 0; i < desc.bNumInterfaces; i++) {
@@ -153,7 +160,7 @@ void print_interface_descriptor(const std::string & prefix, const libusb_interfa
 	char buf[4096];
 	std::cout << prefix << "descriptor length : " << (int)desc.bLength << std::endl;
 	std::cout << prefix << "descriptor type : " << (int)desc.bDescriptorType << std::endl;	// LIBUSB_DT_INTERFACE
-	std::cout << prefix << "interface No. : " << (int)desc.bInterfaceNumber << std::endl;
+	std::cout << prefix << "interface No. : " << (int)desc.bInterfaceNumber << std::endl;   // used in libusb_claim_inteface
 	std::cout << prefix << "descriptor id (aka id used to select this alternate setting) : " << (int)desc.bAlternateSetting << std::endl;
 	std::cout << prefix << "number of endpoint : " << (int)desc.bNumEndpoints << std::endl;
 	std::cout << prefix << "interface class : " << (int)desc.bInterfaceClass << std::endl;	//\ref libusb_class_code
