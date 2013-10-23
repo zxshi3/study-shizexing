@@ -1,5 +1,6 @@
 /**
  * this is a test to active accessory communication mode on phone
+ * use asychronized io
  */
 #include "UsbUtils.h"
 #include <iostream>
@@ -222,6 +223,7 @@ int main(int argc, char** argv) {
 			std::cout << "claim interface[" << interface << "] success\n";
 		}
 		
+		{
 		// TODO
 		// communication
 		// int LIBUSB_CALL libusb_bulk_transfer(libusb_device_handle *dev_handle,
@@ -251,6 +253,13 @@ int main(int argc, char** argv) {
 		} else {
 			std::cout << "WOW, bulk transfer success [phone -> hu]. " << actual_transfer_bytes << " bytes transfered." << std::endl;
 			std::cout << "RECEIVE : " << buf << std::endl;
+		}
+		
+		} // end communication
+		
+		{ // async io
+			struct libusb_transfer inTransfer = {0};
+			struct libusb_transfer outTransfer = {0};
 		}
 		
 		// -2. release interface
