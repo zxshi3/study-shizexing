@@ -4,6 +4,9 @@
  * Reference:
  *  https://banu.com/blog/2/how-to-use-epoll-a-complete-example-in-c/
  *  http://linux.die.net/man/7/epoll
+ *
+ * More Info:
+ *  libevent & libev is designed for asynchronized io for multi platform.
  */
 #include <iostream>
 #include <errno.h>
