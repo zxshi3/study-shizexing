@@ -98,6 +98,9 @@ void sig_handler(int signum) {
 	g_quit = true;
 }
 
+void usbSendComplete(struct libusb_transfer * transfer);
+void usbRecvComplete(struct libusb_transfer * transfer);
+
 int main(int argc, char** argv) {
 	libusb_device_handle * handle = NULL;
 	libusb_context * ctx = NULL;
@@ -258,8 +261,36 @@ int main(int argc, char** argv) {
 		} // end communication
 		
 		{ // async io
-			struct libusb_transfer inTransfer = {0};
+			const char * msg = "test usb async io.";
+			memset(buf, 0, sizeof(buf));
+			strncpy(buf, info, sizeof(buf));
+			char readBuf[1024] = {0};		// if this cause crash issue, declare it as global variable
+			struct libusb_transfer inTransfer = {0};	// if this cause crash issue, use 
+														// struct libusb_transfer * inTransfer = libusb_alloc_transfer(0);
 			struct libusb_transfer outTransfer = {0};
+			libusb_fill_bulk_transfer(&outTransfer	// struct libusb_transfer*
+				, handle					// libusb_device_handle *
+				, endpoint_out				// address of the endpoint where this transfer will be sent
+				, (unsigned char*)&buf[0]	// data buffer
+				, strlen(buf) + 1			// length of data buffer
+				, &usbSendComplete			// callback fn, libusb_transfer_cb_fn
+				, NULL						// user data to pass to callback function
+				, timeout);					// timeout for the transfer in milliseconds
+			r = libusb_submit_transfer(&outTransfer);
+			libusb_fill_bulk_transfer(&inTransfer	// struct libusb_transfer *
+				, handle
+				, endpoint_in
+				, (unsigned char*)&readBuf[0]
+				, sizeof(readBuf) - 1
+				, &usbRecvComplete			// callback fn, libusb_transfer_cb_fn
+				, NULL
+				, timeout);
+			r = libusb_submit_transfer(&inTransfer);
+		
+			for (int i = 0; i < 10; i++) {
+				sleep(1);
+				std::cout << '.';
+			}	
 		}
 		
 		// -2. release interface
@@ -493,3 +524,53 @@ bool GetCommunicationEndpoint(libusb_device_handle * handle, libusb_device * dev
 	libusb_free_config_descriptor(config);
 	return true;
 }
+
+std::ostream & operator << (std::ostream & os, enum libusb_transfer_status status) {
+	os << "libusb_transfer_status : ";
+	switch(status) {
+	case LIBUSB_TRANSFER_COMPLETED:
+		os << "Transfer completed without error.\n"
+			<< "Note that this does not indicate that the entire amount of requested data was transferred.";
+		break;
+	case LIBUSB_TRANSFER_ERROR:
+		os << "Transfer failed.";
+		break;
+	case LIBUSB_TRANSFER_TIMED_OUT:
+		os << "Transfer timed out.";
+		break;
+	case LIBUSB_TRANSFER_CANCELLED:
+		os << "Transfer was cancelled.";
+		break;
+	case LIBUSB_TRANSFER_STALL:
+		os << "For bulk/interrupt endpoints: halt condition detected (endpoint stalled).\n"
+			<< "For control endpoints: control request not supported.";
+		break;
+	case LIBUSB_TRANSFER_NO_DEVICE:
+		os << "Device was disconnected.";
+		break;
+	case LIBUSB_TRANSFER_OVERFLOW:
+		os << "Device sent more data than requested.";
+		break;
+	}
+	os << "\n";
+}
+
+void usbSendComplete(struct libusb_transfer * transfer) {
+	if (transfer) {
+		std::cout << transfer->status;
+		std::cout << "actual transfer " << transfer->actual_length << " bytes" std::endl;
+	} else {
+		std::cerr << "transfer is null. in usbSendComplete" << std::endl;
+	}
+}
+
+void usbRecvComplete(struct libusb_transfer * transfer) {
+	if (transfer) {
+		std::cout << transfer->status;
+		std::cout << "actual transfer " << transfer->actual_length << " bytes" std::endl;
+		std::cout << "RECEIVE : " << static_cast<char*>(transfer->buffer) << std::endl;
+	} else {
+		std::cerr << "transfer is null. in usbSendComplete" << std::endl;
+	}
+}
+
