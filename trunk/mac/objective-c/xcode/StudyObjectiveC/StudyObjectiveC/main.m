@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "ANSI-C.h"
 
 int main(int argc, const char * argv[])
 {
