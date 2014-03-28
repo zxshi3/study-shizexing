@@ -11,6 +11,9 @@
 		990CC09F1884B1930042E753 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 990CC09E1884B1930042E753 /* main.m */; };
 		990CC0A31884B1930042E753 /* StudyObjectiveC.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 990CC0A21884B1930042E753 /* StudyObjectiveC.1 */; };
 		990CC0AC1884D5BC0042E753 /* SClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 990CC0AB1884D5BC0042E753 /* SClass.m */; };
+		997DE9DC188F3224007D24D7 /* SClass+SCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 997DE9DB188F3224007D24D7 /* SClass+SCategory.m */; };
+		998AB2BD1890B46000FCABB7 /* CClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 998AB2BC1890B46000FCABB7 /* CClass.m */; };
+		998AB2DB189742A000FCABB7 /* SBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 998AB2DA189742A000FCABB7 /* SBlock.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +37,13 @@
 		990CC0A21884B1930042E753 /* StudyObjectiveC.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = StudyObjectiveC.1; sourceTree = "<group>"; };
 		990CC0AA1884D5BC0042E753 /* SClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SClass.h; sourceTree = "<group>"; };
 		990CC0AB1884D5BC0042E753 /* SClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SClass.m; sourceTree = "<group>"; };
+		997DE9DA188F3224007D24D7 /* SClass+SCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SClass+SCategory.h"; sourceTree = "<group>"; };
+		997DE9DB188F3224007D24D7 /* SClass+SCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "SClass+SCategory.m"; sourceTree = "<group>"; };
+		998AB2BA1890AFCF00FCABB7 /* SProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SProtocol.h; sourceTree = "<group>"; };
+		998AB2BB1890B46000FCABB7 /* CClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CClass.h; sourceTree = "<group>"; };
+		998AB2BC1890B46000FCABB7 /* CClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CClass.m; sourceTree = "<group>"; };
+		998AB2D9189742A000FCABB7 /* SBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBlock.h; sourceTree = "<group>"; };
+		998AB2DA189742A000FCABB7 /* SBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBlock.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +91,13 @@
 				990CC0A01884B1930042E753 /* Supporting Files */,
 				990CC0AA1884D5BC0042E753 /* SClass.h */,
 				990CC0AB1884D5BC0042E753 /* SClass.m */,
+				997DE9DA188F3224007D24D7 /* SClass+SCategory.h */,
+				997DE9DB188F3224007D24D7 /* SClass+SCategory.m */,
+				998AB2BA1890AFCF00FCABB7 /* SProtocol.h */,
+				998AB2BB1890B46000FCABB7 /* CClass.h */,
+				998AB2BC1890B46000FCABB7 /* CClass.m */,
+				998AB2D9189742A000FCABB7 /* SBlock.h */,
+				998AB2DA189742A000FCABB7 /* SBlock.m */,
 			);
 			path = StudyObjectiveC;
 			sourceTree = "<group>";
@@ -119,7 +136,7 @@
 		990CC0901884B1920042E753 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = zexing;
 			};
 			buildConfigurationList = 990CC0931884B1920042E753 /* Build configuration list for PBXProject "StudyObjectiveC" */;
@@ -144,8 +161,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				998AB2BD1890B46000FCABB7 /* CClass.m in Sources */,
+				998AB2DB189742A000FCABB7 /* SBlock.m in Sources */,
 				990CC09F1884B1930042E753 /* main.m in Sources */,
 				990CC0AC1884D5BC0042E753 /* SClass.m in Sources */,
+				997DE9DC188F3224007D24D7 /* SClass+SCategory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,7 +176,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
@@ -189,7 +208,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_OBJC_ARC = YES;
