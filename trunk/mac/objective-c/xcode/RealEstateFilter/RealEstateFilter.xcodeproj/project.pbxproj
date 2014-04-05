@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		993D478D18EF8DB100811848 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D478C18EF8DB100811848 /* Foundation.framework */; };
+		993D478F18EF8DB100811848 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D478E18EF8DB100811848 /* CoreGraphics.framework */; };
+		993D479118EF8DB100811848 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D479018EF8DB100811848 /* UIKit.framework */; };
+		993D479718EF8DB100811848 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 993D479518EF8DB100811848 /* InfoPlist.strings */; };
+		993D479918EF8DB100811848 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D479818EF8DB100811848 /* main.m */; };
+		993D479D18EF8DB100811848 /* REFAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D479C18EF8DB100811848 /* REFAppDelegate.m */; };
+		993D479F18EF8DB100811848 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 993D479E18EF8DB100811848 /* Images.xcassets */; };
+		993D47A618EF8DB200811848 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D47A518EF8DB200811848 /* XCTest.framework */; };
+		993D47A718EF8DB200811848 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D478C18EF8DB100811848 /* Foundation.framework */; };
+		993D47A818EF8DB200811848 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 993D479018EF8DB100811848 /* UIKit.framework */; };
+		993D47B018EF8DB200811848 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 993D47AE18EF8DB200811848 /* InfoPlist.strings */; };
+		993D47B218EF8DB200811848 /* RealEstateFilterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 993D47B118EF8DB200811848 /* RealEstateFilterTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		993D47A918EF8DB200811848 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 993D478118EF8DB100811848 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 993D478818EF8DB100811848;
+			remoteInfo = RealEstateFilter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		993D478918EF8DB100811848 /* RealEstateFilter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RealEstateFilter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		993D478C18EF8DB100811848 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		993D478E18EF8DB100811848 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		993D479018EF8DB100811848 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		993D479418EF8DB100811848 /* RealEstateFilter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RealEstateFilter-Info.plist"; sourceTree = "<group>"; };
+		993D479618EF8DB100811848 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		993D479818EF8DB100811848 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		993D479A18EF8DB100811848 /* RealEstateFilter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RealEstateFilter-Prefix.pch"; sourceTree = "<group>"; };
+		993D479B18EF8DB100811848 /* REFAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = REFAppDelegate.h; sourceTree = "<group>"; };
+		993D479C18EF8DB100811848 /* REFAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = REFAppDelegate.m; sourceTree = "<group>"; };
+		993D479E18EF8DB100811848 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		993D47A418EF8DB200811848 /* RealEstateFilterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RealEstateFilterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		993D47A518EF8DB200811848 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		993D47AD18EF8DB200811848 /* RealEstateFilterTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RealEstateFilterTests-Info.plist"; sourceTree = "<group>"; };
+		993D47AF18EF8DB200811848 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		993D47B118EF8DB200811848 /* RealEstateFilterTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RealEstateFilterTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		993D478618EF8DB100811848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993D478F18EF8DB100811848 /* CoreGraphics.framework in Frameworks */,
+				993D479118EF8DB100811848 /* UIKit.framework in Frameworks */,
+				993D478D18EF8DB100811848 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		993D47A118EF8DB200811848 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993D47A618EF8DB200811848 /* XCTest.framework in Frameworks */,
+				993D47A818EF8DB200811848 /* UIKit.framework in Frameworks */,
+				993D47A718EF8DB200811848 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		993D478018EF8DB100811848 = {
+			isa = PBXGroup;
+			children = (
+				993D479218EF8DB100811848 /* RealEstateFilter */,
+				993D47AB18EF8DB200811848 /* RealEstateFilterTests */,
+				993D478B18EF8DB100811848 /* Frameworks */,
+				993D478A18EF8DB100811848 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		993D478A18EF8DB100811848 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				993D478918EF8DB100811848 /* RealEstateFilter.app */,
+				993D47A418EF8DB200811848 /* RealEstateFilterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		993D478B18EF8DB100811848 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				993D478C18EF8DB100811848 /* Foundation.framework */,
+				993D478E18EF8DB100811848 /* CoreGraphics.framework */,
+				993D479018EF8DB100811848 /* UIKit.framework */,
+				993D47A518EF8DB200811848 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		993D479218EF8DB100811848 /* RealEstateFilter */ = {
+			isa = PBXGroup;
+			children = (
+				993D479B18EF8DB100811848 /* REFAppDelegate.h */,
+				993D479C18EF8DB100811848 /* REFAppDelegate.m */,
+				993D479E18EF8DB100811848 /* Images.xcassets */,
+				993D479318EF8DB100811848 /* Supporting Files */,
+			);
+			path = RealEstateFilter;
+			sourceTree = "<group>";
+		};
+		993D479318EF8DB100811848 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				993D479418EF8DB100811848 /* RealEstateFilter-Info.plist */,
+				993D479518EF8DB100811848 /* InfoPlist.strings */,
+				993D479818EF8DB100811848 /* main.m */,
+				993D479A18EF8DB100811848 /* RealEstateFilter-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		993D47AB18EF8DB200811848 /* RealEstateFilterTests */ = {
+			isa = PBXGroup;
+			children = (
+				993D47B118EF8DB200811848 /* RealEstateFilterTests.m */,
+				993D47AC18EF8DB200811848 /* Supporting Files */,
+			);
+			path = RealEstateFilterTests;
+			sourceTree = "<group>";
+		};
+		993D47AC18EF8DB200811848 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				993D47AD18EF8DB200811848 /* RealEstateFilterTests-Info.plist */,
+				993D47AE18EF8DB200811848 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		993D478818EF8DB100811848 /* RealEstateFilter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 993D47B518EF8DB200811848 /* Build configuration list for PBXNativeTarget "RealEstateFilter" */;
+			buildPhases = (
+				993D478518EF8DB100811848 /* Sources */,
+				993D478618EF8DB100811848 /* Frameworks */,
+				993D478718EF8DB100811848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RealEstateFilter;
+			productName = RealEstateFilter;
+			productReference = 993D478918EF8DB100811848 /* RealEstateFilter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		993D47A318EF8DB200811848 /* RealEstateFilterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 993D47B818EF8DB200811848 /* Build configuration list for PBXNativeTarget "RealEstateFilterTests" */;
+			buildPhases = (
+				993D47A018EF8DB200811848 /* Sources */,
+				993D47A118EF8DB200811848 /* Frameworks */,
+				993D47A218EF8DB200811848 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				993D47AA18EF8DB200811848 /* PBXTargetDependency */,
+			);
+			name = RealEstateFilterTests;
+			productName = RealEstateFilterTests;
+			productReference = 993D47A418EF8DB200811848 /* RealEstateFilterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		993D478118EF8DB100811848 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = REF;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = SHI.ZEXING;
+				TargetAttributes = {
+					993D47A318EF8DB200811848 = {
+						TestTargetID = 993D478818EF8DB100811848;
+					};
+				};
+			};
+			buildConfigurationList = 993D478418EF8DB100811848 /* Build configuration list for PBXProject "RealEstateFilter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 993D478018EF8DB100811848;
+			productRefGroup = 993D478A18EF8DB100811848 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				993D478818EF8DB100811848 /* RealEstateFilter */,
+				993D47A318EF8DB200811848 /* RealEstateFilterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		993D478718EF8DB100811848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993D479718EF8DB100811848 /* InfoPlist.strings in Resources */,
+				993D479F18EF8DB100811848 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		993D47A218EF8DB200811848 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993D47B018EF8DB200811848 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		993D478518EF8DB100811848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993D479D18EF8DB100811848 /* REFAppDelegate.m in Sources */,
+				993D479918EF8DB100811848 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		993D47A018EF8DB200811848 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				993D47B218EF8DB200811848 /* RealEstateFilterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		993D47AA18EF8DB200811848 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 993D478818EF8DB100811848 /* RealEstateFilter */;
+			targetProxy = 993D47A918EF8DB200811848 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		993D479518EF8DB100811848 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				993D479618EF8DB100811848 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		993D47AE18EF8DB200811848 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				993D47AF18EF8DB200811848 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		993D47B318EF8DB200811848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		993D47B418EF8DB200811848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		993D47B618EF8DB200811848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealEstateFilter/RealEstateFilter-Prefix.pch";
+				INFOPLIST_FILE = "RealEstateFilter/RealEstateFilter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		993D47B718EF8DB200811848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealEstateFilter/RealEstateFilter-Prefix.pch";
+				INFOPLIST_FILE = "RealEstateFilter/RealEstateFilter-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		993D47B918EF8DB200811848 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RealEstateFilter.app/RealEstateFilter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealEstateFilter/RealEstateFilter-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RealEstateFilterTests/RealEstateFilterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		993D47BA18EF8DB200811848 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/RealEstateFilter.app/RealEstateFilter";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "RealEstateFilter/RealEstateFilter-Prefix.pch";
+				INFOPLIST_FILE = "RealEstateFilterTests/RealEstateFilterTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		993D478418EF8DB100811848 /* Build configuration list for PBXProject "RealEstateFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				993D47B318EF8DB200811848 /* Debug */,
+				993D47B418EF8DB200811848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		993D47B518EF8DB200811848 /* Build configuration list for PBXNativeTarget "RealEstateFilter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				993D47B618EF8DB200811848 /* Debug */,
+				993D47B718EF8DB200811848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		993D47B818EF8DB200811848 /* Build configuration list for PBXNativeTarget "RealEstateFilterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				993D47B918EF8DB200811848 /* Debug */,
+				993D47BA18EF8DB200811848 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 993D478118EF8DB100811848 /* Project object */;
+}
