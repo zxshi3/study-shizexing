@@ -19,6 +19,23 @@ class RealEstateFilter(object):
 		f = urllib.urlopen(url)
 		data = f.read()
 		f.close()
+		idx = data.find('<div id="search-results"')
+		#print data[idx:]
+		houses = []
+		i = 0
+		while idx != -1:
+			idx = data.find('<article', idx)
+			if idx == -1:
+				break
+			idx2 = data.find('</article>', idx) + len('</article>')
+			houses.append(data[idx:idx2])
+			i = i + 1
+			print 'i = ' + str(i)
+			idx = idx2
+		print len(houses)
+		print houses[0]
+		#print data.count('<article')
+		#print data.count('</article>')
 		#print data
 		#<div id="search-results"
 		#<article
