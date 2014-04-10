@@ -18,10 +18,38 @@ class RealEstateFilter(object):
 		f.close()
 		return data
 
+	def parseHouseInfo(self, house):
+		print '======================================'
+		idx = house.find('zpid_') + len('zpid_')
+		idx2 = house.find('"', idx)
+		zpid = house[idx:idx2]
+		print 'zillow property id = ' + zpid
+		idx = house.find('longitude="', idx2) + len('longitude="')
+		idx2 = house.find('"', idx)
+		longitude = house[idx:idx2]
+		print 'longitude = ' + longitude
+		idx = house.find('latitude="', idx2) + len('latitude="')
+		idx2 = house.find('"', idx)
+		latitude = house[idx:idx2]
+		print 'latitude = ' + latitude
+		idx = house.find('/homedetails', idx2)
+		idx2 = house.find('"', idx)
+		url = house[idx:idx2]
+		print 'url = ' + url
+		idx = house.find('<dl class="property-info-list col-1 column">', idx2)
+		idx = house.find('<strong>', idx) + len('<strong>')
+		idx2 = house.find('</strong>', idx)
+		houseType = house[idx:idx2]
+		print 'house type : ' + houseType
+		# TODO parse info by housetype
+
 	def collectHouses(self, data):
 		idx = data.find('<article')
 		while idx != -1:
 			idx2 = data.find('</article>', idx) + len('</article>')
+			house = data[idx:idx2]
+			#print house
+			self.parseHouseInfo(house)
 			self.houses.append(data[idx:idx2])
 			idx = data.find('<article', idx2)
 
@@ -54,8 +82,9 @@ class RealEstateFilter(object):
 				self.queryByZipMore(zip, page)
 			idx = data.find('changePage(', idx2)
 		print 'houses.length = ' + str(len(self.houses))
-		for house in self.houses:
-			print house
+		#self.parseHouseInfo(self.houses[0])
+		#for house in self.houses:
+		#	print house
 		#print data.count('<article')
 		#print data.count('</article>')
 		#print data
