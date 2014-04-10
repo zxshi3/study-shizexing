@@ -29,16 +29,16 @@ latitude = 37214002
 url = /homedetails/6538-Hampton-Dr-San-Jose-CA-95120/19764953_zpid/
 house type : House For Sale
 ======================================
-zillow property id = 19764855
-longitude = -121869458
-latitude = 37218860
-url = /homedetails/1243-Washoe-Dr-San-Jose-CA-95120/19764855_zpid/
-house type : House For Sale
-======================================
 zillow property id = 19837003
 longitude = -121831099
 latitude = 37200993
 url = /homedetails/939-Portswood-Cir-San-Jose-CA-95120/19837003_zpid/
+house type : House For Sale
+======================================
+zillow property id = 19764855
+longitude = -121869458
+latitude = 37218860
+url = /homedetails/1243-Washoe-Dr-San-Jose-CA-95120/19764855_zpid/
 house type : House For Sale
 ======================================
 zillow property id = 19762692
@@ -185,17 +185,17 @@ latitude = 37208509
 url = /homedetails/1187-Silver-Shadow-Dr-San-Jose-CA-95120/19768183_zpid/
 house type : Condo For Sale
 ======================================
-zillow property id = 19763257
-longitude = -121891160
-latitude = 37229394
-url = /homedetails/1490-Medallion-Dr-San-Jose-CA-95120/19763257_zpid/
-house type : House For Sale
-======================================
 zillow property id = 19760970
 longitude = -121898217
 latitude = 37228238
 url = /homedetails/6001-Vera-Cruz-Dr-San-Jose-CA-95120/19760970_zpid/
 house type : Townhouse For Sale
+======================================
+zillow property id = 19763257
+longitude = -121891160
+latitude = 37229394
+url = /homedetails/1490-Medallion-Dr-San-Jose-CA-95120/19763257_zpid/
+house type : House For Sale
 ======================================
 zillow property id = 19836266
 longitude = -121831246
@@ -315,31 +315,31 @@ zillow property id = 19764925
 longitude = -121869962
 latitude = 37216428
 url = /homedetails/6560-Little-Falls-Dr-San-Jose-CA-95120/19764925_zpid/
-house type : <span data-tooltip-key="mmm-tip-list" class="definition yui3-tooltip-trigger">Make Me Move</span><sup>&reg;</sup>
-======================================
-zillow property id = 19768002
-longitude = -121847960
-latitude = 37195467
-url = /homedetails/1344-Tiffany-Canyon-Ct-San-Jose-CA-95120/19768002_zpid/
-house type : <span data-tooltip-key="pmf-tip-list" class="definition yui3-tooltip-trigger">Foreclosed</span>
+house type : Make Me Move
 ======================================
 zillow property id = 19762645
 longitude = -121884379
 latitude = 37226396
 url = /homedetails/6168-Meridian-Ave-San-Jose-CA-95120/19762645_zpid/
-house type : <span data-tooltip-key="pmf-tip-list" class="definition yui3-tooltip-trigger">Foreclosed</span>
+house type : Foreclosed
+======================================
+zillow property id = 19768002
+longitude = -121847960
+latitude = 37195467
+url = /homedetails/1344-Tiffany-Canyon-Ct-San-Jose-CA-95120/19768002_zpid/
+house type : Foreclosed
 ======================================
 zillow property id = 19764425
 longitude = -121884530
 latitude = 37237125
 url = /homedetails/5936-Jenny-Lind-Ct-San-Jose-CA-95120/19764425_zpid/
-house type : <span data-tooltip-key="pmf-tip-list" class="definition yui3-tooltip-trigger">Foreclosed</span>
+house type : Foreclosed
 ======================================
 zillow property id = 2108156651
 longitude = -121837804
 latitude = 37175706
 url = /homedetails/Montelegre-Dr-San-Jose-CA-95120/2108156651_zpid/
-house type : <span data-tooltip-key="mmm-tip-list" class="definition yui3-tooltip-trigger">Make Me Move</span><sup>&reg;</sup>
+house type : Make Me Move
 ======================================
 zillow property id = 2108157003
 longitude = -121837804
@@ -351,233 +351,233 @@ zillow property id = 19766498
 longitude = -121849979
 latitude = 37211561
 url = /homedetails/1105-Casual-Way-San-Jose-CA-95120/19766498_zpid/
-house type : <span data-tooltip-key="mmm-tip-list" class="definition yui3-tooltip-trigger">Make Me Move</span><sup>&reg;</sup>
+house type : Make Me Move
 ======================================
 zillow property id = 19766798
 longitude = -121835380
 latitude = 37196259
 url = /homedetails/1141-Mockingbird-Hill-Ln-San-Jose-CA-95120/19766798_zpid/
-house type : <span data-tooltip-key="mmm-tip-list" class="definition yui3-tooltip-trigger">Make Me Move</span><sup>&reg;</sup>
+house type : Make Me Move
 ======================================
 zillow property id = 19761870
 longitude = -121880355
 latitude = 37214608
 url = /homedetails/6540-Whispering-Pines-Dr-San-Jose-CA-95120/19761870_zpid/
-house type : <span data-tooltip-key="mmm-tip-list" class="definition yui3-tooltip-trigger">Make Me Move</span><sup>&reg;</sup>
+house type : Make Me Move
 ======================================
 zillow property id = 119859122
 longitude = -121854890
 latitude = 37213850
 url = 
-house type : e id="zpid_119859122" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121854890" latitude="37213850"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.213850,-121.854890/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=119859122" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Petroni Way - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 119859125
 longitude = -121854470
 latitude = 37216480
 url = 
-house type : e id="zpid_119859125" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121854470" latitude="37216480"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.216480,-121.854470/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=119859125" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Mount Holly Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 119923815
 longitude = -121846730
 latitude = 37208770
 url = 
-house type : e id="zpid_119923815" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121846730" latitude="37208770"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.208770,-121.846730/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=119923815" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Silver Cliff Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 120547120
 longitude = -121883210
 latitude = 37216080
 url = 
-house type : e id="zpid_120547120" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121883210" latitude="37216080"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.216080,-121.883210/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=120547120" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Broadacres Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116794342
 longitude = -121861862
 latitude = 37223110
 url = 
-house type : e id="zpid_116794342" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121861862" latitude="37223110"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.223110,-121.861862/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116794342" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Menlo Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 116794349
-longitude = -121847740
-latitude = 37218631
-url = 
-house type : e id="zpid_116794349" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121847740" latitude="37218631"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.218631,-121.847740/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116794349" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Pomander Pl - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 120572466
 longitude = -121856770
 latitude = 37234500
 url = 
-house type : e id="zpid_120572466" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121856770" latitude="37234500"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.234500,-121.856770/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=120572466" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Crossmont Cir - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
+======================================
+zillow property id = 116794349
+longitude = -121847740
+latitude = 37218631
+url = 
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795038
 longitude = -121901931
 latitude = 37230709
 url = 
-house type : e id="zpid_116795038" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121901931" latitude="37230709"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.230709,-121.901931/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795038" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Dorcey Ln - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 120906538
-longitude = -121843070
-latitude = 37223460
-url = 
-house type : e id="zpid_120906538" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121843070" latitude="37223460"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.223460,-121.843070/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=120906538" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Vista De Almaden - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795070
 longitude = -121902557
 latitude = 37225158
 url = 
-house type : e id="zpid_116795070" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121902557" latitude="37225158"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.225158,-121.902557/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795070" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Monteval Ln - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
+======================================
+zillow property id = 120906538
+longitude = -121843070
+latitude = 37223460
+url = 
+house type : Pre-Foreclosure
+======================================
+zillow property id = 116795072
+longitude = -121887153
+latitude = 37221530
+url = 
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 120568468
 longitude = -121887830
 latitude = 37226170
 url = 
-house type : e id="zpid_120568468" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121887830" latitude="37226170"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.226170,-121.887830/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=120568468" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Via De Los Reyes - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 116795072
-longitude = -121887153
-latitude = 37221530
-url = 
-house type : e id="zpid_116795072" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121887153" latitude="37221530"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.221530,-121.887153/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795072" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Via Del Los Grande - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795210
 longitude = -121875686
 latitude = 37233291
 url = 
-house type : e id="zpid_116795210" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121875686" latitude="37233291"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.233291,-121.875686/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795210" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Rhinecastle Way - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795209
 longitude = -121880550
 latitude = 37220420
 url = 
-house type : e id="zpid_116795209" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121880550" latitude="37220420"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.220420,-121.880550/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795209" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Hirabayashi Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 116795072
-longitude = -121887153
-latitude = 37221530
-url = 
-house type : e id="zpid_116795072" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121887153" latitude="37221530"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.221530,-121.887153/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795072" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img class="image-loaded" rel="nofollow" src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.221530,-121.887153/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6" alt="Via Del Los Grande - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 120561577
-longitude = -121895660
-latitude = 37223260
-url = 
-house type : e id="zpid_120561577" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121895660" latitude="37223260"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.223260,-121.895660/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=120561577" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img class="image-loaded" rel="nofollow" src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.223260,-121.895660/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6" alt="De Palma Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 116795210
-longitude = -121875686
-latitude = 37233291
-url = 
-house type : e id="zpid_116795210" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121875686" latitude="37233291"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.233291,-121.875686/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795210" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img class="image-loaded" rel="nofollow" src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.233291,-121.875686/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6" alt="Rhinecastle Way - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795215
 longitude = -121894493
 latitude = 37230110
 url = 
-house type : e id="zpid_116795215" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121894493" latitude="37230110"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.230110,-121.894493/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795215" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img class="image-loaded" rel="nofollow" src="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.230110,-121.894493/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6" alt="Elsman Ct - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795217
 longitude = -121876487
 latitude = 37224338
 url = 
-house type : e id="zpid_116795217" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121876487" latitude="37224338"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.224338,-121.876487/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795217" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Crossgates Ln - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795220
 longitude = -121870880
 latitude = 37218189
 url = 
-house type : e id="zpid_116795220" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121870880" latitude="37218189"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.218189,-121.870880/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795220" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Little Falls Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795221
 longitude = -121865951
 latitude = 37216461
 url = 
-house type : e id="zpid_116795221" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121865951" latitude="37216461"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.216461,-121.865951/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795221" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Bose Ln - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
+======================================
+zillow property id = 120563695
+longitude = -121905380
+latitude = 37223560
+url = 
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795222
 longitude = -121865631
 latitude = 37214859
 url = 
-house type : e id="zpid_116795222" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121865631" latitude="37214859"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.214859,-121.865631/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795222" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Crown Blvd - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795225
 longitude = -121860076
 latitude = 37208869
 url = 
-house type : e id="zpid_116795225" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121860076" latitude="37208869"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.208869,-121.860076/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795225" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Hampton Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795231
 longitude = -121875808
 latitude = 37206779
 url = 
-house type : e id="zpid_116795231" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121875808" latitude="37206779"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.206779,-121.875808/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795231" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Rockview Ct - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795234
 longitude = -121845588
 latitude = 37197788
 url = 
-house type : e id="zpid_116795234" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121845588" latitude="37197788"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.197788,-121.845588/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795234" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Shelby Creek Ln - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
+======================================
+zillow property id = 120561577
+longitude = -121895660
+latitude = 37223260
+url = 
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 116795236
 longitude = -121855567
 latitude = 37203689
 url = 
-house type : e id="zpid_116795236" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121855567" latitude="37203689"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.203689,-121.855567/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116795236" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Mallard Ridge Loop - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 117204885
 longitude = -121883209
 latitude = 37216079
 url = 
-house type : e id="zpid_117204885" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121883209" latitude="37216079"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.216079,-121.883209/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=117204885" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Broadacres Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 117667239
 longitude = -121872451
 latitude = 37234111
 url = 
-house type : e id="zpid_117667239" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121872451" latitude="37234111"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.234111,-121.872451/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=117667239" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Rhinecastle Way - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 120547120
-longitude = -121883210
-latitude = 37216080
-url = 
-house type : e id="zpid_120547120" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121883210" latitude="37216080"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.216080,-121.883210/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=120547120" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Broadacres Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 118609619
 longitude = -121879318
 latitude = 37222038
 url = 
-house type : e id="zpid_118609619" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121879318" latitude="37222038"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.222038,-121.879318/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=118609619" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Firefly Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 119107904
 longitude = -121835620
 latitude = 37209000
 url = 
-house type : e id="zpid_119107904" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121835620" latitude="37209000"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.209000,-121.835620/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=119107904" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Brooktree Way - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
+======================================
+zillow property id = 119107898
+longitude = -121865960
+latitude = 37223010
+url = 
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 119293851
 longitude = -121880210
 latitude = 37222020
 url = 
-house type : e id="zpid_119293851" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121880210" latitude="37222020"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.222020,-121.880210/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=119293851" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Gondola Way - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 116794351
-longitude = -121825850
-latitude = 37215700
-url = 
-house type : e id="zpid_116794351" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121825850" latitude="37215700"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.215700,-121.825850/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=116794351" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Buena Monte Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
-======================================
-zillow property id = 120098328
-longitude = -121854890
-latitude = 37213850
-url = 
-house type : e id="zpid_120098328" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121854890" latitude="37213850"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.213850,-121.854890/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=120098328" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Petroni Way - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 119373542
 longitude = -121866940
 latitude = 37229760
 url = 
-house type : e id="zpid_119373542" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121866940" latitude="37229760"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.229760,-121.866940/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=119373542" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Fleetwood Dr - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pf-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
+======================================
+zillow property id = 116794351
+longitude = -121825850
+latitude = 37215700
+url = 
+house type : Pre-Foreclosure
+======================================
+zillow property id = 120098328
+longitude = -121854890
+latitude = 37213850
+url = 
+house type : Pre-Foreclosure
 ======================================
 zillow property id = 119559559
 longitude = -121886120
 latitude = 37233160
 url = 
-house type : e id="zpid_119559559" statusType="0" role="article" class="property-listing property-listing-large rollable plisting action-column-enabled" longitude="-121886120" latitude="37233160"><figure class="photo left column property-thumb " role="img" data-photourl="http://dev.virtualearth.net/REST/v1/Imagery/Map/Aerial/37.233160,-121.886120/17?mapSize=150,112&amp;key=AmdvKO2hNoyLePakiVzRBZiGPKCxV6MtwWneohoPfmXclTaRTzvT6_Ict5-PBHO6"><a href="/homedetail/AuthRequired.htm?r=pfc&amp;zpid=119559559" id="register_opener" class="show-lightbox mask" rel="nofollow" data-ga-label="Camo Map List"><img src="http://www.zillowstatic.com/static/images/indicator.gif" class="loading" rel="nofollow" alt="Norelius Ct - sign in for details"></img></a></figure><div class="right property-info"><dl class="property-info-list col-1 column"><dt class="type-MMM type show-icon"><div class="type-icon"></div><strong><span data-tooltip-key="pfa-tip-list" class="definition yui3-tooltip-trigger">Pre-Foreclosure</span>
+house type : Pre-Foreclosure
+======================================
+zillow property id = 119698937
+longitude = -121818080
+latitude = 37187770
+url = 
+house type : Pre-Foreclosure
 houses.length = 97

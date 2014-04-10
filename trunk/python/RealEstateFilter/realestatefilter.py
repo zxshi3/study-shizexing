@@ -32,14 +32,19 @@ class RealEstateFilter(object):
 		idx2 = house.find('"', idx)
 		latitude = house[idx:idx2]
 		print 'latitude = ' + latitude
-		idx = house.find('/homedetails', idx2)
+		idx = house.find('/homedetails')
 		idx2 = house.find('"', idx)
 		url = house[idx:idx2]
 		print 'url = ' + url
-		idx = house.find('<dl class="property-info-list col-1 column">', idx2)
+		idx = house.find('<dl class="property-info-list col-1 column">')
 		idx = house.find('<strong>', idx) + len('<strong>')
 		idx2 = house.find('</strong>', idx)
 		houseType = house[idx:idx2]
+		if houseType.count('<span') > 0:
+			idx = houseType.find('<span')
+			idx = houseType.find('>', idx) + len('>')
+			idx2 = houseType.find('</span>')
+			houseType = houseType[idx:idx2]
 		print 'house type : ' + houseType
 		# TODO parse info by housetype
 
