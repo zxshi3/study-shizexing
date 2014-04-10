@@ -1,0 +1,4 @@
+This app is used to filter real estate from www.zillow.com
+
+How to run:
+python realestatefilter.py [zip1] [zip2] ...
