@@ -3,6 +3,7 @@
 import sys, urllib, urllib2
 #import realestate
 from realestate import RealEstate
+from httpreader import HttpReader
 #from realestate import Address
 
 class RealEstateFilter(object):
@@ -16,12 +17,6 @@ class RealEstateFilter(object):
 		self.estates = []
 		for i in xrange(1,len(arg)):
 			self.zips.append(arg[i])
-
-	def retrieveUrl(self, url):
-		f = urllib2.urlopen(url)
-		data = f.read()
-		f.close()
-		return data
 
 	def parseHouseInfo(self, house):
 		estate = RealEstate()
@@ -88,7 +83,7 @@ class RealEstateFilter(object):
 	''' query houses by zip and continue to page $page '''
 	def queryByZipMore(self, zip, page):
 		url = 'http://www.zillow.com/homes/' + zip + '_rb/' + page + '_p/'
-		data = self.retrieveUrl(url)
+		data = HttpReader.retrieveUrl(url)
 		self.collectHouses(data)
 
 	''' query houses by zip '''
@@ -98,7 +93,7 @@ class RealEstateFilter(object):
 		#r = urllib2.Request(url)
 		#r.add_header('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
 		#r.add_header('Referer', 'http://www.zillow.com/')
-		data = self.retrieveUrl(url)
+		data = HttpReader.retrieveUrl(url)
 		#print data
 		idx = data.find('<div id="search-results"')
 		#print data[idx:]
