@@ -1,6 +1,9 @@
 #!/usr/bin/python
 
 import sys, urllib, urllib2
+#import realestate
+from realestate import RealEstate
+#from realestate import Address
 
 class RealEstateFilter(object):
 	"""docstring for RealEstateFilter"""
@@ -8,7 +11,9 @@ class RealEstateFilter(object):
 		super(RealEstateFilter, self).__init__()
 		self.arg = arg
 		self.zips = []
+		# original house information
 		self.houses = []
+		self.estates = []
 		for i in xrange(1,len(arg)):
 			self.zips.append(arg[i])
 
@@ -19,23 +24,32 @@ class RealEstateFilter(object):
 		return data
 
 	def parseHouseInfo(self, house):
+		estate = RealEstate()
 		print '======================================'
+		# 1. get id
 		idx = house.find('zpid_') + len('zpid_')
 		idx2 = house.find('"', idx)
 		zpid = house[idx:idx2]
+		estate.id = zpid
 		print 'zillow property id = ' + zpid
+		# 2. get lat, lon
 		idx = house.find('longitude="', idx2) + len('longitude="')
 		idx2 = house.find('"', idx)
 		longitude = house[idx:idx2]
+		estate.lon = longitude
 		print 'longitude = ' + longitude
 		idx = house.find('latitude="', idx2) + len('latitude="')
 		idx2 = house.find('"', idx)
 		latitude = house[idx:idx2]
+		estate.lat = latitude
 		print 'latitude = ' + latitude
+		# 3. get url
 		idx = house.find('/homedetails')
 		idx2 = house.find('"', idx)
 		url = house[idx:idx2]
 		print 'url = ' + url
+		estate.url = url
+		# 4,5 type & property type
 		idx = house.find('<dl class="property-info-list col-1 column">')
 		idx = house.find('<strong>', idx) + len('<strong>')
 		idx2 = house.find('</strong>', idx)
@@ -46,7 +60,20 @@ class RealEstateFilter(object):
 			idx2 = houseType.find('</span>')
 			houseType = houseType[idx:idx2]
 		print 'house type : ' + houseType
+		estate.setType(houseType)
+		#print estate.type
+		#print estate.propertytype
 		# TODO parse info by housetype
+		'''
+		{
+			'House For Sale' : lambda e, h : e.parseHouse(h)
+		}[houseType](estate, house)
+		'''
+		{
+			'House For Sale' : lambda e, h : e.parseHouse(h)
+		}.get(houseType, lambda e, h : 'DO NOTHING')(estate, house)
+
+		self.estates.append(estate)
 
 	def collectHouses(self, data):
 		idx = data.find('<article')
