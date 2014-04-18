@@ -22,7 +22,13 @@ class RealEstateFilter(object):
 		estate = RealEstate()
 		print '======================================'
 		estate.parseRealEstateInfo(house)
-		self.estates.append(estate)
+		if estate.price > 700000:
+			#print 'tooooooooooooooooexpensive'
+			#print 'estate:\n' + str(estate)
+			pass
+		else:
+			print 'estate:\n' + str(estate)
+			self.estates.append(estate)
 
 	def collectHouses(self, data):
 		idx = data.find('<article')
@@ -62,7 +68,7 @@ class RealEstateFilter(object):
 				pages.append(page)
 				self.queryByZipMore(zip, page)
 			idx = data.find('changePage(', idx2)
-		print 'houses.length = ' + str(len(self.houses))
+		#print 'houses.length = ' + str(len(self.houses))
 		#self.parseHouseInfo(self.houses[0])
 		#for house in self.houses:
 		#	print house
