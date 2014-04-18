@@ -24,6 +24,11 @@ class SchoolType:
 
 class School:
 	def __init__(self, s):
+		self.name = ''
+		self.url = ''
+		self.grades = ''
+		self.distance = ''
+		self.rating = 0
 		self.type = SchoolType.UNKNOWN
 		# rating
 		idx = s.find('<span class="gs-rating-number">')
@@ -36,7 +41,7 @@ class School:
 				print 'cannot find rating end tag'
 			else:
 				self.rating = s[idx:idx2]
-				print 'school rating = ' + self.rating
+				#print 'school rating = ' + self.rating
 				idx = idx2
 		# name & url
 		idx = s.find('<span class="nearby-schools-name">', idx)
@@ -54,7 +59,7 @@ class School:
 					print 'cannot find school url end tag'
 				else:
 					self.url = 'http://www.zillow.com' + s[idx:idx2]
-					print 'school url = ' + self.url
+					#print 'school url = ' + self.url
 					idx = idx2
 				idx = s.find('>', idx)
 				if idx == -1:
@@ -66,7 +71,7 @@ class School:
 						print 'cannot find school name end tag'
 					else:
 						self.name = s[idx:idx2]
-						print 'school name = ' + self.name
+						#print 'school name = ' + self.name
 						idx = idx2
 		# grades
 		idx = s.find('<span class="nearby-schools-grades">', idx)
@@ -79,16 +84,16 @@ class School:
 				print 'cannot find school grades end tag'
 			else:
 				self.grades = s[idx:idx2]
-				print 'school grades = ' + self.grades
+				#print 'school grades = ' + self.grades
 				if self.grades.count('K') > 0:
 					self.type = SchoolType.ELEMENTARY
-					print 'elementary school type'
+					#print 'elementary school type'
 				elif self.grades.count('12') > 0:
 					self.type = SchoolType.HIGH
-					print 'high school type'
+					#print 'high school type'
 				else:
 					self.type = SchoolType.MIDDLE
-					print 'middle school type'
+					#print 'middle school type'
 				idx = idx2
 		# distance
 		idx = s.find('<span class="nearby-schools-distance">')
@@ -101,9 +106,21 @@ class School:
 				print 'cannot find school distance end tag'
 			else:
 				self.distance = s[idx:idx2]
-				print 'school distance = ' + self.distance
+				#print 'school distance = ' + self.distance
 				idx = idx2
 
+	def __str__(self):
+		return '{\n' \
+			+ '\t\t"name" : "' + self.name + '",\n' \
+			+ '\t\t"url" : "' + self.url + '",\n' \
+			+ '\t\t"rating" : ' + str(self.rating) + ',\n' \
+			+ '\t\t"grades" : "' + self.grades + '",\n' \
+			+ '\t\t"distance" : "' + self.distance + '",\n' \
+			+ '\t\t"type" : "' + self.type + '"\n' \
+		+ '\t}'
+
+	def __repr__(self):
+		return self.__str__()
 
 '''
 class Address(object):
@@ -134,7 +151,7 @@ class RealEstate:
 		# property type
 		self.propertytype = PropertyType.UNKNOWN
 		# value, unit us dollar
-		self.value = 0
+		self.price = 0
 		# address
 		self.address = 'unknown'
 		# number of bedroom
@@ -155,7 +172,24 @@ class RealEstate:
 		self.high = 0
 		# schools in html
 		self.schools = []
-	
+
+	def __str__(self):
+		r = '{\n' \
+			+ '\t"id" : "' + self.id + '",\n' \
+			+ '\t"url" : "' + self.url + '",\n' \
+			+ '\t"price" : "' + str(self.price) + '",\n' \
+			+ '\t"bedroom" : "' + str(self.bedroom) + '",\n' \
+			+ '\t"bathroom" : "' + str(self.bathroom) + '",\n' \
+			+ '\t"space" : "' + str(self.space) + '",\n' \
+			+ '\t"lot" : "' + str(self.lot) + '"'
+		if len(self.schools) > 0:
+			r += ',\n' \
+				+ '\t"schools" : "' + str(self.schools) + '"\n'
+		else:
+			r += '\n'
+		r += '}'
+		return r
+
 	def setType(self, t):
 		self.type = {
 			'Apartment For Rent' : RealEstateType.APARTMENT,
@@ -208,8 +242,8 @@ class RealEstate:
 			print 'cannot identify price end tag'
 			return -3
 		price = h[idx:idx2]
-		print 'price = ' + price
-		# TODO, convert price to integer value
+		#print 'price = ' + price
+		self.price = int(price.translate(None, '$,'))
 		return idx2
 
 	def parseAddress(self, h, idx):
@@ -256,7 +290,7 @@ class RealEstate:
 			return -8
 		postalCode = h[idx:idx2]
 		self.address = streetAddress + ', ' + addressLocality + ', ' + addressRegion + ' ' + postalCode
-		print 'address = ' + self.address
+		#print 'address = ' + self.address
 		return idx2
 
 	def parseBedroom(self, h, idx):
@@ -272,7 +306,7 @@ class RealEstate:
 			print 'cannot find bedroom end tag'
 			return -2
 		self.bedroom = h[idx:idx2]
-		print 'bedroom = ' + self.bedroom
+		#print 'bedroom = ' + self.bedroom
 		return idx2
 
 	def parseBathroom(self, h, idx):
@@ -288,7 +322,7 @@ class RealEstate:
 			print 'cannot find bathroom end tag'
 			return -2
 		self.bathroom = h[idx:idx2]
-		print 'bathroom = ' + self.bathroom
+		#print 'bathroom = ' + self.bathroom
 		#idx = h.find('<span class="hide-when-narrow">ths</span>, ', idx2) + len('<span class="hide-when-narrow">ths</span>, ')
 		# if the house has only 1 bathroom, there is no 's'
 		idx = h.find('<span class="hide-when-narrow">th', idx2)
@@ -311,7 +345,7 @@ class RealEstate:
 			print 'cannot find space end tag'
 			return -1
 		self.space = h[idx:idx2]
-		print 'space = ' + self.space
+		#print 'space = ' + self.space
 		return idx2
 
 	def parseLot(self, h, idx):
@@ -328,7 +362,7 @@ class RealEstate:
 			print 'cannot find lot end tag'
 			return -2
 		self.lot = h[idx:idx2]
-		print 'lot = ' + self.lot
+		#print 'lot = ' + self.lot
 		return idx2
 
 	def parseBuiltYear(self, h, idx):
@@ -345,7 +379,7 @@ class RealEstate:
 			print 'cannot find built year end tag'
 			return -2
 		self.year = h[idx:idx2]
-		print 'built year = ' + self.year
+		#print 'built year = ' + self.year
 		return idx2
 
 	#import httpreader
@@ -355,7 +389,7 @@ class RealEstate:
 		#print '+++++++++++++'
 		#print f
 		#print '+++++++++++++'
-		print f.count('<li class="nearby-school assigned-school">')
+		#print f.count('<li class="nearby-school assigned-school">')
 		idx = 0
 		while idx != -1:
 			idx = f.find('<li class="nearby-school assigned-school">', idx)
@@ -374,7 +408,7 @@ class RealEstate:
 			self.schools.append(school)
 
 	def parseHouse(self, h):
-		print 'wow.... parse house'
+		#print 'wow.... parse house'
 		#print '--------------'
 		#print h
 		#print '--------------'
@@ -395,24 +429,24 @@ class RealEstate:
 		idx2 = house.find('"', idx)
 		zpid = house[idx:idx2]
 		self.id = zpid
-		print 'zillow property id = ' + zpid
+		#print 'zillow property id = ' + zpid
 		# 2. get lat, lon
 		idx = house.find('longitude="', idx2) + len('longitude="')
 		idx2 = house.find('"', idx)
 		longitude = house[idx:idx2]
 		self.lon = longitude
-		print 'longitude = ' + longitude
+		#print 'longitude = ' + longitude
 		idx = house.find('latitude="', idx2) + len('latitude="')
 		idx2 = house.find('"', idx)
 		latitude = house[idx:idx2]
 		self.lat = latitude
-		print 'latitude = ' + latitude
+		#print 'latitude = ' + latitude
 		# 3. get url
 		idx = house.find('/homedetails')
 		idx2 = house.find('"', idx)
 		url = house[idx:idx2]
 		self.url = 'http://www.zillow.com' + url
-		print 'url = ' + self.url
+		#print 'url = ' + self.url
 		# 4,5 type & property type
 		idx = house.find('<dl class="property-info-list col-1 column">')
 		idx = house.find('<strong>', idx) + len('<strong>')
@@ -423,7 +457,7 @@ class RealEstate:
 			idx = houseType.find('>', idx) + len('>')
 			idx2 = houseType.find('</span>')
 			houseType = houseType[idx:idx2]
-		print 'house type : ' + houseType
+		#print 'house type : ' + houseType
 		self.setType(houseType)
 		# TODO parse info by housetype
 		{
