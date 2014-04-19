@@ -1,4 +1,5 @@
 from httpreader import HttpReader
+from school import School, SchoolType
 
 class RealEstateType:
 	APARTMENT = 'apartment'
@@ -16,112 +17,6 @@ class PropertyType:
 	RENT = 'rent'
 	UNKNOWN = 'unknown'
 
-class SchoolType:
-	ELEMENTARY = 'elementary'
-	MIDDLE = 'middle'
-	HIGH = 'high'
-	UNKNOWN = 'unknown'
-
-class School:
-	def __init__(self, s):
-		self.name = ''
-		self.url = ''
-		self.grades = ''
-		self.distance = ''
-		self.rating = 0
-		self.type = SchoolType.UNKNOWN
-		# rating
-		idx = s.find('<span class="gs-rating-number">')
-		if idx == -1:
-			print 'cannot find rating'
-		else:
-			idx = idx + len('<span class="gs-rating-number">')
-			idx2 = s.find('</span>', idx)
-			if idx2 == -1:
-				print 'cannot find rating end tag'
-			else:
-				self.rating = s[idx:idx2]
-				#print 'school rating = ' + self.rating
-				idx = idx2
-		# name & url
-		idx = s.find('<span class="nearby-schools-name">', idx)
-		if idx == -1:
-			print 'cannot find school name & url'
-		else:
-			idx = idx + len('<span class="nearby-schools-name">')
-			idx = s.find('<a href="', idx)
-			if idx == -1:
-				print 'cannot find school url'
-			else:
-				idx = idx + len('<a href="')
-				idx2 = s.find('"', idx)
-				if idx2 == -1:
-					print 'cannot find school url end tag'
-				else:
-					self.url = 'http://www.zillow.com' + s[idx:idx2]
-					#print 'school url = ' + self.url
-					idx = idx2
-				idx = s.find('>', idx)
-				if idx == -1:
-					print 'cannot find school name'
-				else:
-					idx = idx + len('>')
-					idx2 = s.find('</a>', idx)
-					if idx2 == -1:
-						print 'cannot find school name end tag'
-					else:
-						self.name = s[idx:idx2]
-						#print 'school name = ' + self.name
-						idx = idx2
-		# grades
-		idx = s.find('<span class="nearby-schools-grades">', idx)
-		if idx == -1:
-			print 'cannot find school grades'
-		else:
-			idx = idx + len('<span class="nearby-schools-grades">')
-			idx2 = s.find('</span>', idx)
-			if idx2 == -1:
-				print 'cannot find school grades end tag'
-			else:
-				self.grades = s[idx:idx2]
-				#print 'school grades = ' + self.grades
-				if self.grades.count('K') > 0:
-					self.type = SchoolType.ELEMENTARY
-					#print 'elementary school type'
-				elif self.grades.count('12') > 0:
-					self.type = SchoolType.HIGH
-					#print 'high school type'
-				else:
-					self.type = SchoolType.MIDDLE
-					#print 'middle school type'
-				idx = idx2
-		# distance
-		idx = s.find('<span class="nearby-schools-distance">')
-		if idx == -1:
-			print 'cannot find school distance'
-		else:
-			idx = idx + len('<span class="nearby-schools-distance">')
-			idx2 = s.find('</span>', idx)
-			if idx2 == -1:
-				print 'cannot find school distance end tag'
-			else:
-				self.distance = s[idx:idx2]
-				#print 'school distance = ' + self.distance
-				idx = idx2
-
-	def __str__(self):
-		return '{\n' \
-			+ '\t\t"name" : "' + self.name + '",\n' \
-			+ '\t\t"url" : "' + self.url + '",\n' \
-			+ '\t\t"rating" : ' + str(self.rating) + ',\n' \
-			+ '\t\t"grades" : "' + self.grades + '",\n' \
-			+ '\t\t"distance" : "' + self.distance + '",\n' \
-			+ '\t\t"type" : "' + self.type + '"\n' \
-		+ '\t}'
-
-	def __repr__(self):
-		return self.__str__()
-
 '''
 class Address(object):
 	"""docstring for Address"""
@@ -137,7 +32,8 @@ class Address(object):
 class RealEstate:
 	"""base class for real estate"""
 
-	def __init__(self):
+	def __init__(self, html):
+		self.html = html
 		# id
 		self.id = 'INVALID_ID'
 		# lon
@@ -165,21 +61,23 @@ class RealEstate:
 		# year built
 		self.year = 0
 		# elementary school, if unknown, assign to -1
-		self.elementary = 0
+		self.elementary = None
 		# middle school
-		self.middle = 0
+		self.middle = None
 		# high school
-		self.high = 0
+		self.high = None
 		# schools in html
 		self.schools = []
+		# parse from html
+		self.parseRealEstateInfo(self.html)
 
 	def __str__(self):
 		r = '{\n' \
 			+ '\t"id" : "' + self.id + '",\n' \
 			+ '\t"url" : "' + self.url + '",\n' \
-			+ '\t"price" : "' + str(self.price) + '",\n' \
-			+ '\t"bedroom" : "' + str(self.bedroom) + '",\n' \
-			+ '\t"bathroom" : "' + str(self.bathroom) + '",\n' \
+			+ '\t"price" : ' + str(self.price) + ',\n' \
+			+ '\t"bedroom" : ' + str(self.bedroom) + ',\n' \
+			+ '\t"bathroom" : ' + str(self.bathroom) + ',\n' \
 			+ '\t"space" : "' + str(self.space) + '",\n' \
 			+ '\t"lot" : "' + str(self.lot) + '"'
 		if len(self.schools) > 0:
@@ -189,6 +87,9 @@ class RealEstate:
 			r += '\n'
 		r += '}'
 		return r
+
+	def __repr__(self):
+		return self.__str__()
 
 	def setType(self, t):
 		self.type = {
@@ -304,6 +205,9 @@ class RealEstate:
 		idx2 = h.find(' b', idx)
 		if idx2 == -1:
 			print 'cannot find bedroom end tag'
+			#print '----------'
+			#print h
+			#print '----------'
 			return -2
 		self.bedroom = h[idx:idx2]
 		#print 'bedroom = ' + self.bedroom
@@ -372,6 +276,9 @@ class RealEstate:
 		idx = h.find('"property-year"> Built in ', idx)
 		if idx == -1:
 			print 'cannot find built year'
+			#print '----------'
+			#print h
+			#print '----------'
 			return -1
 		idx = idx + len('"property-year"> Built in ')
 		idx2 = h.find('</dt>', idx)
@@ -406,6 +313,29 @@ class RealEstate:
 			#print 'ssssssssssss'
 			school = School(s)
 			self.schools.append(school)
+			if school.type == SchoolType.ELEMENTARY:
+				if self.elementary == None:
+					self.elementary = school
+				else:
+					print 'multiple elementary school'
+					print 'self.elementary : ' + str(self.elementary)
+					print 'school : ' + str(school)
+			elif school.type == SchoolType.MIDDLE:
+				if self.middle == None:
+					self.middle = school
+				else:
+					print 'multiple middle school'
+					print 'self.middle : ' + str(self.middle)
+					print 'school : ' + str(school)
+			elif school.type == SchoolType.HIGH:
+				if self.high == None:
+					self.high = school
+				else:
+					print 'multiple high school'
+					print 'self.high : ' + str(self.high)
+					print 'school : ' + str(school)
+			else:
+				print 'unknown type school : ' + str(school)
 
 	def parseHouse(self, h):
 		#print 'wow.... parse house'
