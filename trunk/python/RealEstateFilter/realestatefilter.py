@@ -1,7 +1,6 @@
 #!/usr/bin/python
 
-import sys, urllib, urllib2
-#import realestate
+import sys, urllib, urllib2, subprocess
 from realestate import RealEstate
 from httpreader import HttpReader
 
@@ -35,13 +34,14 @@ class RealEstateFilter(object):
 			#finally, we find match estate
 			# 3. school
 			n = len(estate.schools)
-			ratings = 0
-			for school in estate.schools:
-				ratings += school.rating
-			avg = ratings / n
-			if avg < 7:
-				#print 'rating < 7. avg = ' + str(avg) + '\turl = ' + estate.url
-				continue
+			if n > 0:
+				ratings = 0
+				for school in estate.schools:
+					ratings += school.rating
+				avg = ratings / n
+				if avg < 7:
+					#print 'rating < 7. avg = ' + str(avg) + '\turl = ' + estate.url
+					continue
 			self.matchedEstates.append(estate)
 
 	# @deprecated
@@ -108,3 +108,7 @@ if __name__ == '__main__':
 	print '<match-result>'
 	print filter.matchedEstates
 	print '</match-result>'
+	#print '<match-url>'
+	for estate in filter.matchedEstates:
+		subprocess.call(['open', '-a', 'Safari', estate.url])
+	#print '</match-url>'
