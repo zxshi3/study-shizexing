@@ -215,16 +215,23 @@ class RealEstate:
 
 	def parseBathroom(self, h, idx):
 		if idx < 0:
-			idx = 0
-		idx = h.find('<span class="hide-when-narrow">s</span>, ', idx)
-		if idx == -1:
-			print 'cannot find bathroom'
-			return -1
-		idx = idx + len('<span class="hide-when-narrow">s</span>, ')
+			idx = h.find('"property-data">')
+			if idx == -1:
+				print 'cannot locate property-data for bathroom'
+				return -1
+		# find bathroom end tag
 		idx2 = h.find(' ba', idx)
 		if idx2 == -1:
 			print 'cannot find bathroom end tag'
 			return -2
+		idx = h.rfind('</span>, ', idx, idx2)
+		if idx == -1:
+			print 'cannot find bathroom start tag. print house : '
+			print '<house id = ' + self.id + '>'
+			print h
+			print '</house id = ' + self.id + '>'
+			return -3
+		idx = idx + len('</span>, ')
 		self.bathroom = h[idx:idx2]
 		#print 'bathroom = ' + self.bathroom
 		#idx = h.find('<span class="hide-when-narrow">ths</span>, ', idx2) + len('<span class="hide-when-narrow">ths</span>, ')
@@ -234,22 +241,28 @@ class RealEstate:
 			print 'cannot pass bathroom unit'
 			return -3
 		idx = idx + len('<span class="hide-when-narrow">th')
-		idx = h.find('</span>, ', idx)
-		if idx == -1:
-			print 'cannot pass bathroom end tag'
-			return -4
-		idx = idx + len('</span>, ')
 		return idx
 
 	def parseSpace(self, h, idx):
 		if idx < 0:
-			idx = 0
-		idx2 = h.find('</dt>', idx)
+			idx = h.find('"property-data">')
+			if idx == -1:
+				print 'cannot locate property-data for living space'
+				return -1
+		idx2 = h.find(' sqft', idx)
 		if idx2 == -1:
 			print 'cannot find space end tag'
-			return -1
+			return -2
+		idx = h.rfind('</span>, ', idx , idx2)
+		if idx == -1:
+			print 'cannot find space start tag. print house : '
+			print '<house id = ' + self.id + '>'
+			print h
+			print '</house id = ' + self.id + '>'
+			return -3
+		idx = idx + len('</span>, ')
+		idx2 = idx2 + len(' sqft')
 		self.space = h[idx:idx2]
-		#print 'space = ' + self.space
 		return idx2
 
 	def parseLot(self, h, idx):
@@ -296,18 +309,23 @@ class RealEstate:
 		#print '+++++++++++++'
 		#print f
 		#print '+++++++++++++'
-		#print f.count('<li class="nearby-school assigned-school">')
-		idx = 0
+		idx = f.find('<li class="nearby-schools-header">')
+		if idx != -1:
+			idx = idx + len('<li class="nearby-schools-header">')
+		else:
+			idx = 0
 		while idx != -1:
-			idx = f.find('<li class="nearby-school assigned-school">', idx)
+			# <li class="nearby-school">
+			idx = f.find('<li class="nearby-school', idx)
 			if idx == -1:
 				break
-			idx = idx + len('<li class="nearby-school assigned-school">')
 			idx2 = f.find('</li>', idx)
 			if idx2 == -1:
 				print 'cannot find school end tag'
 				continue
+			idx2 = idx2 + len('</li>')
 			s = f[idx:idx2]
+			idx = idx2
 			#print 'ssssssssssss'
 			#print s
 			#print 'ssssssssssss'
@@ -317,9 +335,16 @@ class RealEstate:
 				if self.elementary == None:
 					self.elementary = school
 				else:
-					print 'multiple elementary school'
-					print 'self.elementary : ' + str(self.elementary)
-					print 'school : ' + str(school)
+					if self.elementary.isAssigned == False and school.isAssigned == True:
+						self.elementary = school
+					elif self.elementary.isAssigned == True and school.isAssigned == False:
+						pass
+					else:
+						if self.elementary.rating < school.rating:
+							self.elementary = school
+						print 'multiple elementary school'
+						print 'self.elementary : ' + str(self.elementary)
+						print 'school : ' + str(school)
 			elif school.type == SchoolType.MIDDLE:
 				if self.middle == None:
 					self.middle = school

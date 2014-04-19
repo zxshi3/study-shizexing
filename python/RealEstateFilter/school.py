@@ -5,67 +5,120 @@ class SchoolType:
 	UNKNOWN = 'unknown'
 
 class School:
-	def __init__(self, s):
+	def __init__(self, html):
 		self.name = ''
 		self.url = ''
 		self.grades = ''
 		self.distance = ''
 		self.rating = 0
+		self.isAssigned = False
 		self.type = SchoolType.UNKNOWN
+		self.school_html = html
+		# assigned?
+		idx = self.__parseAssignedSchool()
 		# rating
-		idx = s.find('<span class="gs-rating-number">')
+		idx = self.__parseRating(idx)
+		# name & url
+		idx = self.__parseNameAndUrl(idx)
+		# grades
+		idx = self.__parseGrades(idx)
+		# distance
+		idx = self.__parseDistance(idx)
+
+	def __str__(self):
+		return '{\n' \
+			+ '\t\t"name" : "' + self.name + '",\n' \
+			+ '\t\t"url" : "' + self.url + '",\n' \
+			+ '\t\t"rating" : ' + str(self.rating) + ',\n' \
+			+ '\t\t"grades" : "' + self.grades + '",\n' \
+			+ '\t\t"distance" : "' + self.distance + '",\n' \
+			+ '\t\t"type" : "' + self.type + '",\n' \
+			+ '\t\t"assigned" : ' + str(self.isAssigned) + '\n' \
+		+ '\t}'
+
+	def __repr__(self):
+		return self.__str__()
+
+	def __parseAssignedSchool(self):
+		idx = self.school_html.find('assigned-school')
+		if idx != -1:
+			self.isAssigned = True
+		return idx 
+
+	def __parseRating(self, idx):
+		if idx < 0:
+			idx = 0
+		idx = self.school_html.find('<span class="gs-rating-number">', idx)
 		if idx == -1:
 			print 'cannot find rating'
+			print '<school>'
+			print self.school_html
+			print '</school>'
+			return -1
 		else:
 			idx = idx + len('<span class="gs-rating-number">')
-			idx2 = s.find('</span>', idx)
+			idx2 = self.school_html.find('</span>', idx)
 			if idx2 == -1:
 				print 'cannot find rating end tag'
+				return -2
 			else:
-				self.rating = int(s[idx:idx2])
+				self.rating = int(self.school_html[idx:idx2])
 				#print 'school rating = ' + self.rating
-				idx = idx2
-		# name & url
-		idx = s.find('<span class="nearby-schools-name">', idx)
+				return idx2
+
+	def __parseNameAndUrl(self, idx):
+		if idx < 0:
+			idx = 0
+		idx = self.school_html.find('<span class="nearby-schools-name">', idx)
 		if idx == -1:
 			print 'cannot find school name & url'
+			return -1
 		else:
 			idx = idx + len('<span class="nearby-schools-name">')
-			idx = s.find('<a href="', idx)
+			idx = self.school_html.find('<a href="', idx)
 			if idx == -1:
 				print 'cannot find school url'
+				return -2
 			else:
 				idx = idx + len('<a href="')
-				idx2 = s.find('"', idx)
+				idx2 = self.school_html.find('"', idx)
 				if idx2 == -1:
 					print 'cannot find school url end tag'
+					#return -3
 				else:
-					self.url = 'http://www.zillow.com' + s[idx:idx2]
+					self.url = 'http://www.zillow.com' + self.school_html[idx:idx2]
 					#print 'school url = ' + self.url
 					idx = idx2
-				idx = s.find('>', idx)
+				idx = self.school_html.find('>', idx)
 				if idx == -1:
 					print 'cannot find school name'
+					return -4
 				else:
 					idx = idx + len('>')
-					idx2 = s.find('</a>', idx)
+					idx2 = self.school_html.find('</a>', idx)
 					if idx2 == -1:
 						print 'cannot find school name end tag'
+						return -5
 					else:
-						self.name = s[idx:idx2]
+						self.name = self.school_html[idx:idx2]
 						#print 'school name = ' + self.name
-						idx = idx2
-		# grades
-		idx = s.find('<span class="nearby-schools-grades">', idx)
+						return idx2
+
+	def __parseGrades(self, idx):
+		if idx < 0:
+			idx = 0
+		idx = self.school_html.find('<span class="nearby-schools-grades">', idx)
 		if idx == -1:
 			print 'cannot find school grades'
+			return -1
 		else:
 			idx = idx + len('<span class="nearby-schools-grades">')
-			idx2 = s.find('</span>', idx)
+			idx2 = self.school_html.find('</span>', idx)
 			if idx2 == -1:
 				print 'cannot find school grades end tag'
+				return -2
 			else:
-				self.grades = s[idx:idx2]
+				self.grades = self.school_html[idx:idx2]
 				#print 'school grades = ' + self.grades
 				if self.grades.count('K') > 0:
 					self.type = SchoolType.ELEMENTARY
@@ -76,31 +129,22 @@ class School:
 				else:
 					self.type = SchoolType.MIDDLE
 					#print 'middle school type'
-				idx = idx2
-		# distance
-		idx = s.find('<span class="nearby-schools-distance">')
+				return idx2
+
+	def __parseDistance(self, idx):
+		if idx < 0:
+			idx = 0
+		idx = self.school_html.find('<span class="nearby-schools-distance">')
 		if idx == -1:
 			print 'cannot find school distance'
+			return -1
 		else:
 			idx = idx + len('<span class="nearby-schools-distance">')
-			idx2 = s.find('</span>', idx)
+			idx2 = self.school_html.find('</span>', idx)
 			if idx2 == -1:
 				print 'cannot find school distance end tag'
+				return -2
 			else:
-				self.distance = s[idx:idx2]
+				self.distance = self.school_html[idx:idx2]
 				#print 'school distance = ' + self.distance
-				idx = idx2
-
-	def __str__(self):
-		return '{\n' \
-			+ '\t\t"name" : "' + self.name + '",\n' \
-			+ '\t\t"url" : "' + self.url + '",\n' \
-			+ '\t\t"rating" : ' + str(self.rating) + ',\n' \
-			+ '\t\t"grades" : "' + self.grades + '",\n' \
-			+ '\t\t"distance" : "' + self.distance + '",\n' \
-			+ '\t\t"type" : "' + self.type + '"\n' \
-		+ '\t}'
-
-	def __repr__(self):
-		return self.__str__()
-
+				return idx2
