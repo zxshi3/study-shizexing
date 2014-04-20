@@ -209,7 +209,7 @@ class RealEstate:
 			#print h
 			#print '----------'
 			return -2
-		self.bedroom = h[idx:idx2]
+		self.bedroom = int(h[idx:idx2])
 		#print 'bedroom = ' + self.bedroom
 		return idx2
 
