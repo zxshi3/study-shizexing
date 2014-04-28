@@ -104,6 +104,13 @@ int main(int argc, char** argv) {
 	uint16_t pid = 0x4e22;
 	int r;
 	
+	//const char * info = "USB accessory [Ubuntu 12.04 host]";
+	const char * info = "Telenav USB accessory";
+	//const char * info = "brad.shi";
+	if (argc > 1) {
+		info = argv[1];		
+	}
+	
 	if (SIG_ERR == signal(SIGINT, &sig_handler)) {
 		std::cerr << "can not catch SIGINT\n";
 	}
@@ -229,9 +236,6 @@ int main(int argc, char** argv) {
 		//		int *actual_length, unsigned int timeout);
 		char buf[1024];
 		memset(buf, 0, sizeof(buf));
-		const char * info = "USB accessory [Ubuntu 12.04 host]";
-		//const char * info = "Telenav USB accessory";
-		//const char * info = "brad.shi";
 		strncpy(buf, info, sizeof(buf));
 		int actual_transfer_bytes = 0;
 		int timeout = 1000;
@@ -263,7 +267,7 @@ int main(int argc, char** argv) {
 		
 		// ??? reset aoa ???
 		// SendResetCommand(handle);
-		libusb_reset_device(handle);
+		// libusb_reset_device(handle);
 		
 		// -1. reactive kernel driver?
 		if (active == 1) {
