@@ -23,5 +23,5 @@ for zip in zips:
 	cmd = 'python realestatefilter.py ' + zip + ' > ' + zip + '.txt'
 	print cmd 
 	os.system(cmd)
-	print 'sleep 3 seconds to avoid banned'
+	print 'sleep 3 seconds to avoid being banned'
 	time.sleep(3)
