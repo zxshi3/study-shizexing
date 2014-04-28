@@ -41,24 +41,10 @@ class RealEstateFilter(object):
 				avg = ratings / n
 				if avg < 7:
 					#print 'rating < 7. avg = ' + str(avg) + '\turl = ' + estate.url
-					continue
+					# only avg < 7 && (estate.elementary < 8 || estate.middle < 8)
+					if estate.elementary.rating < 8 or estate.middle.rating < 8:
+						continue
 			self.matchedEstates.append(estate)
-
-	# @deprecated
-	def parseRealEstateInfo(self, house_html):
-		estate = RealEstate(house_html)
-		print '======================================'
-		estate.parseRealEstateInfo(house_html)
-		self.estates.append(estate)
-		''' move to filter step
-		if estate.price > 700000:
-			#print 'tooooooooooooooooexpensive'
-			#print 'estate:\n' + str(estate)
-			pass
-		else:
-			print 'estate:\n' + str(estate)
-			self.estates.append(estate)
-		'''
 
 	def __collectEstates(self, data):
 		idx = data.find('<article')
