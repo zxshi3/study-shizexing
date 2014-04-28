@@ -1,6 +1,6 @@
 #!/usr/bin/python
 
-import sys, urllib, urllib2, subprocess
+import sys, urllib, urllib2, subprocess, platform
 from realestate import RealEstate
 from httpreader import HttpReader
 
@@ -96,5 +96,8 @@ if __name__ == '__main__':
 	print '</match-result>'
 	#print '<match-url>'
 	for estate in filter.matchedEstates:
-		subprocess.call(['open', '-a', 'Safari', estate.url])
+		if platform.system() == 'Darwin':
+			subprocess.call(['open', '-a', 'Safari', estate.url])
+		else:
+			subprocess.call(['explorer', estate.url])
 	#print '</match-url>'
