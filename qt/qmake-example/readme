@@ -1,0 +1,8 @@
+# for a debug build
+qmake CONFIG+=debug
+# for a release build
+qmake CONFIG+=release
+
+# or CONFIG = debug_and_release
+
+http://qt-project.org/forums/viewthread/17855
