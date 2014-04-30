@@ -1,4 +1,4 @@
-from parser import Parser
+from realestateparser import Parser
 from override import overrides
 
 class RedfinParser(Parser):
