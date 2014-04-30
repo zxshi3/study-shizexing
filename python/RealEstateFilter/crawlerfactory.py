@@ -1,3 +1,4 @@
+from crawler import Crawler
 from redfincrawler import RedfinCrawler
 from zillowcrawler import ZillowCrawler
 
