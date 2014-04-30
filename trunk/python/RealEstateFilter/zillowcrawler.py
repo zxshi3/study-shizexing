@@ -1,6 +1,7 @@
 from crawler import Crawler, overrides
 from httpreader import HttpReader
 from realestate import RealEstate
+from parserfactory import ParserFactory
 
 class ZillowCrawler(Crawler):
 	def __init__(self):
@@ -37,7 +38,9 @@ class ZillowCrawler(Crawler):
 			idx2 = data.find('</article>', idx) + len('</article>')
 			house_html = data[idx:idx2]
 			#print house_html
-			estate = RealEstate(house_html)
+			parser = ParserFactory.getParser('zillow')
+			#estate = RealEstate(house_html)
+			estate = parser.parse(house_html)
 			self.estates.append(estate)
 			idx = data.find('<article', idx2)
 

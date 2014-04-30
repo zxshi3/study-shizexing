@@ -1,18 +1,14 @@
-
 from abc import abstractmethod, ABCMeta
-from override import overrides
 # http://stackoverflow.com/questions/1167617/in-python-how-do-i-indicate-im-overriding-a-method
 # http://stackoverflow.com/questions/5856963/abstract-methods-in-python
-
-class Crawler(object):
+class Parser(object):
 	__metaclass__ = ABCMeta
 	def __init__(self):
-		self.host = ''
+		pass
 
-	''' search all estate in $zip area 
-	@return RealEstate[]
+	''' parse html page to get RealEstate 
+	@return RealEstate
 	'''
 	@abstractmethod
-	def queryByZip(self, zip):
+	def parse(self, html):
 		pass
-		#raise NotImplementedError("no queryByZip implementation")
