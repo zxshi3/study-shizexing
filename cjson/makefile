@@ -1,5 +1,6 @@
-CC = gcc
-CXX = llvm-g++
+PREFIX = llvm-
+CC = $(PREFIX)gcc
+CXX = $(PREFIX)g++
 
 CFLAGS = -I.
 LDLIBS = -lm

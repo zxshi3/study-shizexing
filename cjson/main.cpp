@@ -10,6 +10,16 @@
 #include "cJSON.h"
 #include <string>
 
+static void testParseJson();
+static void testGenerateJson();
+
+int main(int argc, char** argv)
+{
+    testParseJson();
+    testGenerateJson();
+	return 0;
+}
+
 static const char filename[] = "test.json";
 
 static std::string loadJson(const std::string & filename) {
@@ -40,8 +50,7 @@ static std::string loadJson(const std::string & filename) {
 	}	
 }
 
-int main(int argc, char** argv)
-{
+static void testParseJson() {
 	cJSON * tmp;
 	cJSON * json;
 	
@@ -75,6 +84,19 @@ int main(int argc, char** argv)
 	}
 
 	cJSON_Delete(json);
+}
 
-	return 0;
+static void testGenerateJson() {
+    cJSON* obj = cJSON_CreateObject();
+    cJSON_AddStringToObject(obj, "name", "connection_status");
+    cJSON* data = cJSON_CreateObject();
+    cJSON_AddStringToObject(data, "vendor", "tnlink");
+    cJSON_AddTrueToObject(data, "connected");
+    cJSON_AddNumberToObject(data, "version", 3);
+    cJSON_AddItemToObject(obj, "data", data);
+    
+    char * json = cJSON_Print(obj);
+    printf("json string : \n%s\n", json);
+    free(json);
+    cJSON_Delete(obj);
 }
