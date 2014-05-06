@@ -1,21 +1,24 @@
 CC = gcc
+CXX = llvm-g++
 
 CFLAGS = -I.
 LDLIBS = -lm
 
-SRCS = \
-	cJSON.c \
-	main.c
+JSON_SRCS = \
+	cJSON.c
 
-OBJS = $(SRCS:.c=.o)
+SRCS = \
+	main.cpp
+
+OBJS = $(JSON_SRCS:.c=.o) $(SRCS:.cpp=.o)
 
 all : bin
 
-obj : $(SRCS)
-	$(CC) -c $(SRCS) $(CFLAGS)
+obj : $(SRCS) $(JSON_SRCS)
+	$(CXX) -c $(SRCS) $(CFLAGS)
 	
 bin : obj $(OBJS)
-	$(CC) -o test $(OBJS) $(LDLIBS)
+	$(CXX) -o test $(OBJS) $(LDLIBS)
 
 clean:
 	rm $(OBJS) test
