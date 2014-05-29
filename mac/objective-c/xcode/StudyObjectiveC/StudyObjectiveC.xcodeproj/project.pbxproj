@@ -14,6 +14,7 @@
 		997DE9DC188F3224007D24D7 /* SClass+SCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 997DE9DB188F3224007D24D7 /* SClass+SCategory.m */; };
 		998AB2BD1890B46000FCABB7 /* CClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 998AB2BC1890B46000FCABB7 /* CClass.m */; };
 		998AB2DB189742A000FCABB7 /* SBlock.m in Sources */ = {isa = PBXBuildFile; fileRef = 998AB2DA189742A000FCABB7 /* SBlock.m */; };
+		99F56AFC1909942A0008B521 /* MemoryManagement.m in Sources */ = {isa = PBXBuildFile; fileRef = 99F56AFB1909942A0008B521 /* MemoryManagement.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -44,6 +45,8 @@
 		998AB2BC1890B46000FCABB7 /* CClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CClass.m; sourceTree = "<group>"; };
 		998AB2D9189742A000FCABB7 /* SBlock.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBlock.h; sourceTree = "<group>"; };
 		998AB2DA189742A000FCABB7 /* SBlock.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBlock.m; sourceTree = "<group>"; };
+		99F56AFA1909942A0008B521 /* MemoryManagement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MemoryManagement.h; sourceTree = "<group>"; };
+		99F56AFB1909942A0008B521 /* MemoryManagement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MemoryManagement.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +101,8 @@
 				998AB2BC1890B46000FCABB7 /* CClass.m */,
 				998AB2D9189742A000FCABB7 /* SBlock.h */,
 				998AB2DA189742A000FCABB7 /* SBlock.m */,
+				99F56AFA1909942A0008B521 /* MemoryManagement.h */,
+				99F56AFB1909942A0008B521 /* MemoryManagement.m */,
 			);
 			path = StudyObjectiveC;
 			sourceTree = "<group>";
@@ -164,6 +169,7 @@
 				998AB2BD1890B46000FCABB7 /* CClass.m in Sources */,
 				998AB2DB189742A000FCABB7 /* SBlock.m in Sources */,
 				990CC09F1884B1930042E753 /* main.m in Sources */,
+				99F56AFC1909942A0008B521 /* MemoryManagement.m in Sources */,
 				990CC0AC1884D5BC0042E753 /* SClass.m in Sources */,
 				997DE9DC188F3224007D24D7 /* SClass+SCategory.m in Sources */,
 			);

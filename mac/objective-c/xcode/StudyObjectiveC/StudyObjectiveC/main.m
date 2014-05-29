@@ -10,6 +10,7 @@
 //#import "SClass.h"
 #import "SClass+SCategory.h"
 #import "SBlock.h"
+#import "MemoryManagement.h"
 
 int main(int argc, const char * argv[])
 {
@@ -40,6 +41,8 @@ int main(int argc, const char * argv[])
         [block callWithAddBlock:a ParamB:b Block: ^(int i, int j) {
             NSLog(@"%d * %d = %d", i, j, i * j);
         }];
+        // 3. test memory management
+        MemoryManagement * m = [[MemoryManagement alloc] init];
     }
     return 0;
 }

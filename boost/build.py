@@ -9,4 +9,7 @@ else :
     os.makedirs(dirBuild)
     print 'not exists'
 print dirBuild
-#os.system('cmake 
+os.chdir(dirBuild)
+os.system('cmake ..')
+os.system('make')
+os.chdir('..')

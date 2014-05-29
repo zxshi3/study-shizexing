@@ -1,0 +1,12 @@
+http://www.boost.org
+
+Preparing: 
+to get a copy of boost. please follow https://svn.boost.org/trac/boost/wiki/TryModBoost
+git clone --recursive https://github.com/boostorg/boost.git $YOUR_BOOST_FOLDER_NAME
+cd $YOUR_BOOST_FOLDER_NAME
+./bootstrap.sh
+./b2 headers
+
+Run: run on mac
+export DYLD_LIBRARY_PATH=${BOOST_ROOT}/stage/lib
+http://lists.apple.com/archives/unix-porting/2002/Sep/msg00021.html
