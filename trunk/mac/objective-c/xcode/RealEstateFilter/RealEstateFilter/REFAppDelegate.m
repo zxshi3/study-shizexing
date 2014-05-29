@@ -2,6 +2,11 @@
 //  REFAppDelegate.m
 //  RealEstateFilter
 //
+//  @see <a href="https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40007457-CH1-SW1">View Controller Programming Guide</a>
+//  @see <a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Introduction.html#//apple_ref/doc/uid/TP40011313">View Controller Catalog</a>
+//  @see <a href="https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewPG_iPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009503">View Programming Guide</a>
+//  @see <a href="https://developer.apple.com/library/ios/documentation/EventHandling/Conceptual/EventHandlingiPhoneOS/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009541">Event Handling Guide</a>
+//  @see <a href="http://stackoverflow.com/questions/992348/reading-html-content-from-a-uiwebview">reading html content from a UIWebView</a>
 //  Created by Shi, Zexing on 4/4/14.
 //  Copyright (c) 2014 SHI.ZEXING. All rights reserved.
 //
@@ -10,12 +15,38 @@
 
 @implementation REFAppDelegate
 
+// zexings add some textedit & button to the default view
+- (void)setupView {
+    UIViewController * viewController = self.window.rootViewController;
+    if (viewController == nil) {
+        NSLog(@"view controller is nil");
+    }
+    UIView * view = [[self.window rootViewController] view];
+    if (view == nil) {
+        NSLog(@"view is nil");
+    }
+    UITextField * tf = [[UITextField alloc] init];
+    [view addSubview:tf];
+    UIButton * bt = [[UIButton alloc] init];
+    [bt setTitle:@"test" forState:UIControlStateNormal];
+    [view addSubview:bt];
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeRoundedRect];
+//    [button addTarget:self
+//               action:@selector(aMethod:)
+//     forControlEvents:UIControlEventTouchUpInside];
+    [button setTitle:@"Show View" forState:UIControlStateNormal];
+    button.frame = CGRectMake(80.0, 210.0, 160.0, 40.0);
+    [view addSubview:button];
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    // zexings add
+    [self setupView];
     return YES;
 }
 
