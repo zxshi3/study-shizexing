@@ -17,3 +17,6 @@ target_link_libraries(boost_study
     boost_system
 )
 
+add_executable( smart_ptr_sample
+    smart_ptr.cpp
+)
