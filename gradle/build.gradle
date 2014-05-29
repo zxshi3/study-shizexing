@@ -1,0 +1,80 @@
+task hello << {
+	println 'Hello gradle!'
+}
+
+task upper << {
+	String str = 'zexing'
+	println 'str = ' + str
+	println 'str.toUpperCase() = ' + str.toUpperCase()
+}
+
+task count << {
+	4.times { print "$it " }
+}
+
+// depends on task hello
+// task intro (dependsOn: 'hello') << {
+// both 'hello' and hello work fine
+task intro (dependsOn: hello) << {
+	println "I'm gradle"
+}
+
+// Could not find property 'taskY' on root project 'gradle'.
+// task taskX(dependsOn: taskY) << {
+// lazy depends on task taskY
+task taskX(dependsOn: 'taskY') << {
+	println "task X"
+}
+
+task taskY << {
+	println "task Y"
+}
+
+// dynamic creation of a task
+4.times { counter ->
+	task "task$counter" << {
+		println "task number : $counter"
+	}
+}
+task0.dependsOn task2, task3
+
+hello.doFirst {
+	println "hello. do first"
+}
+
+hello.doLast {
+	println "hello. do last"
+}
+
+// The calls doFirst and doLast can be executed multiple times.
+// The << operator is simply an alias for doLast.
+hello << {
+	println "hello 2"
+	println "Greeting from the $hello.name task"
+}
+
+task my_task {
+	ext.my_property = "my value"
+}
+
+task print_my_task_property {
+	println my_task.my_property
+}
+
+defaultTasks 'hello', 'intro'
+
+task distribution << {
+    println "We build the zip with version=$version"
+}
+
+task release(dependsOn: 'distribution') << {
+    println 'We release now'
+}
+
+gradle.taskGraph.whenReady {taskGraph ->
+    if (taskGraph.hasTask(release)) {
+        version = '1.0'
+    } else {
+        version = '1.0-SNAPSHOT'
+    }
+}

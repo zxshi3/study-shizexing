@@ -1,0 +1,13 @@
+http://www.gradle.org
+http://www.gradle.org/docs/current/userguide/userguide.html
+http://groovy.codehaus.org
+
+http://groovy.codehaus.org/Download?nc#Download-GVMtheGroovyenVironmentManager
+install groovy
+$ curl -s get.gvmtool.net | bash
+$ source "$HOME/.gvm/bin/gvm-init.sh"
+$ gvm install groovy
+$ groovy -version
+
+install groovy TextMate bundle
+http://groovy.codehaus.org/TextMate
