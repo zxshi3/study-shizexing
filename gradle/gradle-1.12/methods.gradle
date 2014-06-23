@@ -1,0 +1,6 @@
+apply from: 'v.gradle'
+
+task inMethods {
+    println 'in method, version = ' + myVersion()
+    println 'in methods'
+}
