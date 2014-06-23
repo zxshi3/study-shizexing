@@ -1,0 +1,24 @@
+// @see http://www.gradle.org/docs/current/dsl/
+task hello {
+    println 'hello'
+}
+
+// NOTE: zexings, this can fix method not find issue
+apply from: 'v.gradle'
+/*def myVersion() {
+    return 'gradle 1.12'
+}
+*/
+task useMethod {
+    println 'version() = ' + myVersion()
+}
+
+project.ext {
+    srcDirName = 'src/java'
+}
+
+def getSrcDir(project) {
+    return project.file(srcDirName)
+}
+
+apply from: 'methods.gradle'

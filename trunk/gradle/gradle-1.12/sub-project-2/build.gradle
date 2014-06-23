@@ -1,0 +1,9 @@
+// define task in sub project 2 (1 also has the same name task)
+task name {
+    println 'sub project 2'
+}
+
+// define taks only in sub project 2
+task sub2 {
+    println 'sub2'
+}
