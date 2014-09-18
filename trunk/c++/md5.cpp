@@ -463,6 +463,10 @@ using std::cout; using std::endl;
 int main(int argc, char *argv[])
 {
     // cout << "md5 of 'grape': " << md5("grape") << endl;
-    cout << "md5 of 'admin': " << md5("admin") << endl;
+	std::string str = "admin";
+	if (argc == 2) {
+		str = argv[1];
+	}
+    cout << "md5 of '" << str << "': " << md5(str) << endl;
     return 0;
 }
